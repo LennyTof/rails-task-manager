@@ -1,0 +1,7 @@
+<h1><%= @task.title %></h1>
+<ul>
+<p><%= @task.details %></p>
+</ul>
+<%= link_to "Back to your tasks", tasks_path, :class => "badge bg-primary text-wrap text-light text-decoration-none" %>
+<%= link_to "Edit your task", edit_task_path, :class => "badge bg-primary text-wrap text-light text-decoration-none" %>
+<%= link_to "Delete your task", task_path(@task), :class => "badge bg-danger text-wrap text-dark text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
